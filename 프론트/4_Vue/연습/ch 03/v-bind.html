@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <img v-bind:src="imgSrc" alt="귀여운강아지" />
+      <button v-on:click="changeImgSrc">이미지 변경</button>
+    </div>
+  </body>
+  <script>
+    const vueApp = Vue.createApp({
+      name: "App",
+      data() {
+        return {
+          imgSrc:
+            "https://d2v80xjmx68n4w.cloudfront.net/gigs/EOYa41702649874.jpg",
+        };
+      },
+      methods: {
+        changeImgSrc() {
+          this.imgSrc =
+            "https://file.miricanvas.com/template_thumb/2023/07/25/14/10/kquto2dsa9b5p1wl/thumb.jpg";
+        },
+      },
+    }).mount("#app");
+  </script>
+</html>
