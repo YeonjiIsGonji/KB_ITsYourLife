@@ -12,14 +12,27 @@ public class Scanner4Ex {
         System.out.print("종료 정수를 입력하세요 : ");
         int num2 = scanner.nextInt();
 
-        if (num1 <= num2) {
-            int sum = 0;
-            for (int i = num1; i <= num2 ; i++) {
-                sum += i;
-            }
-            System.out.println("시작 수 부터 종료 수 까지의 합은 : " + sum );
-        } else {
+        if (num1 > num2) {
             System.out.println("시작 정수가 종료 정수 보다 큽니다!");
         }
+
+//        강사님 풀이(이렇게 푸는게 요즘 추세!)
+        int sum = 0;
+        for (int i = num1; i <= num2 ; i++) {
+            sum += i;
+        }
+        System.out.println("시작 수 부터 종료 수 까지의 합은 : " + sum );
+
+
+//        내가 푼 풀이
+//        if (num1 <= num2) {
+//            int sum = 0;
+//            for (int i = num1; i <= num2 ; i++) {
+//                sum += i;
+//            }
+//            System.out.println("시작 수 부터 종료 수 까지의 합은 : " + sum );
+//        } else {
+//            System.out.println("시작 정수가 종료 정수 보다 큽니다!");
+//        }
     }
 }
